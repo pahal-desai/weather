@@ -1,0 +1,84 @@
+body {
+    background-color: rgb(31, 31, 31);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+}
+
+.weather {
+    position: absolute;
+    left: 50%;
+    top: 12%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.weather input {
+    color: aliceblue;
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 200px;
+    height: 32px;
+    font-family: inherit;
+    font-size: 15px;
+
+    background-image: repeating-linear-gradient(to right,
+            aliceblue 0 5px,
+            transparent 5px 10px);
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    transition: background-image 0.2s ease;
+}
+
+.weather input::placeholder {
+    color: rgba(240, 248, 255, 0.45);
+}
+
+.weather input:hover,
+.weather input:focus {
+    background-image: linear-gradient(aliceblue, aliceblue);
+    background-size: 100% 1px;
+}
+
+.weather button {
+    border-radius: 5px;
+    height: 32px;
+    padding: 0 16px;
+    background-color: transparent;
+    border: 1px solid aliceblue;
+    color: aliceblue;
+    font-family: inherit;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 8px;
+    transition: all 0.2s ease;
+}
+
+.weather button:hover {
+    background-color: aliceblue;
+    color: rgb(31, 31, 31);
+}
+
+.temp span {
+    font-size: 1000%;
+    font-weight: 200;
+    color: aliceblue;
+    text-align: center;
+    position: relative;
+    top: 10vh;
+    display: inline-block;
+    letter-spacing: -3px;
+    user-select: none;
+}
+
+.condition {
+    position: relative;
+    top: 10vh;
+    color: rgba(240, 248, 255, 0.6);
+    font-size: 1.15rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
